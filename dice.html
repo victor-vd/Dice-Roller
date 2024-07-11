@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice</title>
+</head>
+<body style="font-family: 'Franklin Gothic Medium';">
+    <center>
+        <h1 style="margin-bottom: 12px; text-decoration: underline;">DICE ROLL:</h2>
+        <p id="rolledMax" style="margin: 0; font-size: 32px; color: black; font-weight: bold;"></p>
+        <p id="rolledAvg" style="margin: 0; font-size: 32px; color: black; font-weight: bold;">0</p>
+        <p id="rolledMin" style="margin: 0; font-size: 32px; color: black; font-weight: bold;"></p>
+        
+        <div style="display: flex; justify-content: center; flex-direction: row;">
+            <div style="margin: 5px;">
+                <p style="margin: 5px; font-size: 20px; font-weight: bold;">Dices</p>
+                <input id="diceNumber" type="text" maxlength="4" style="width: 64px; border-width: 4px; font-size: 24px; font-weight: bold; text-align: center;"/>
+            </div>
+            <div style="margin: 5px;">
+                <p style="margin: 5px; font-size: 20px; font-weight: bold;">Sides</p>
+                <input id="diceSides" type="text" maxlength="4" style="width: 64px; border-width: 4px; font-size: 24px; font-weight: bold; text-align: center;"/>
+            </div>
+        </div><br>
+
+        <button type="submit" id="roll" style="width: 96px; font-size: 20px; height: 32px; border-width: 4px">ROLL</button><br><br><br>
+        
+        <div style="font-size: 24px; font-weight: bold;">
+            <input id="getMaxValue" type="checkbox" >maxValue</input>
+            <input id="getMinValue" type="checkbox">minValue</input>
+            <input id="getAverage" type="checkbox" checked>average</input><br><br>
+            <input id="roundMin" name="round" type="radio">roundDown</input>
+            <input id="roundMax" name="round" type="radio" checked>roundUp</input>
+        </div>
+
+        <br>
+        <div style="width: 320px; font-size: 20px; height: auto; min-height: 63.5px; border: 4px inset black; padding: 10px;">
+            <p id="rolledDices"></p>
+        </div>
+    </center>
+
+
+    <script src="dice.js"></script>
+</body>
+</html>
