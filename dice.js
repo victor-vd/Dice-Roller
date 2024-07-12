@@ -1,20 +1,10 @@
 const rolledDices = document.getElementById("rolledDices");
-let rolled = 0;
-const textRollMax = document.getElementById("rolledMax");
-const textRollAvg = document.getElementById("rolledAvg");
-const textRollMin = document.getElementById("rolledMin");
-let rolledAvg = 0;
-let rolledMin = 0;
-let rolledMax = 0;
-let avgValue = 0;
-let rolling;
+let rolled = 0, rolledAvg = 0, rolledMin = 0, rolledMax = 0, avgValue = 0, rolling, minValue, maxValue;
 const getMaxValue = document.getElementById("getMaxValue");
 const getMinValue = document.getElementById("getMinValue");
 const getAverage = document.getElementById("getAverage");
 const roundMin = document.getElementById("roundMin");
 const roundMax = document.getElementById("roundMax");
-let minValue;
-let maxValue;
 
 document.getElementById("roll").onclick = function(){
     rolledDices.textContent = ""
@@ -58,9 +48,9 @@ document.getElementById("roll").onclick = function(){
             rolledAvg = "avg: "+avgValue;
         }
 
-        textRollMax.textContent = rolledMax!==0?rolledMax:'';
-        textRollAvg.textContent = rolledAvg!==0?rolledAvg:'';    
-        textRollMin.textContent = rolledMin!==0?rolledMin:'';
+        document.getElementById("rolledMax").textContent = rolledMax!==0?rolledMax:'';
+        document.getElementById("rolledAvg").textContent = rolledAvg!==0?rolledAvg:'';    
+        document.getElementById("rolledMin").textContent = rolledMin!==0?rolledMin:'';
         rolled = 0;
     }
 }
