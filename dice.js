@@ -43,41 +43,21 @@ document.getElementById("roll").onclick = function(){
         rolled /= diceNumber;
         console.log(avgValue);
         avgValue = roundMin.checked? Math.floor(rolled): Math.ceil(rolled);
-        
-        if((getMaxValue.checked)&&(getMinValue.checked)&&(getAverage.checked)){
+
+        rolledMax = '';
+        rolledAvg = '';
+        rolledMin = '';
+
+        if(getMaxValue.checked){
             rolledMax = "max: "+maxValue;
-            rolledAvg = "avg: "+avgValue;
-            rolledMin = "min: "+minValue;
-        } else if((getMaxValue.checked)&&(getMinValue.checked)){
-            rolledMax = "max: "+maxValue;
-            rolledAvg = '';
-            rolledMin = "min: "+minValue;
-        } else if((getMaxValue.checked)&&(getAverage.checked)){
-            rolledMax = "max: "+maxValue;
-            rolledAvg = "avg: "+avgValue;
-            rolledMin = '';
-        } else if((getMinValue.checked)&&(getAverage.checked)){
-            rolledMax = '';
-            rolledAvg = "avg: "+avgValue;
-            rolledMin = "min: "+minValue;
-        } else if(getMaxValue.checked){
-            rolledMax = "max: "+maxValue;
-            rolledAvg = '';
-            rolledMin = '';
-        } else if(getMinValue.checked){
-            rolledMax = '';
-            rolledAvg = '';
-            rolledMin = "min: "+minValue;
-        } else if(getAverage.checked){
-            rolledMax = '';
-            rolledAvg = "avg: "+avgValue;
-            rolledMin = '';
-        } else {
-            rolledMax = '';
-            rolledAvg = '0';
-            rolledMin = '';
         }
-        
+        if(getMinValue.checked){
+            rolledMin = "min: "+minValue;
+        }
+        if(getAverage.checked){
+            rolledAvg = "avg: "+avgValue;
+        }
+
         textRollMax.textContent = rolledMax!==0?rolledMax:'';
         textRollAvg.textContent = rolledAvg!==0?rolledAvg:'';    
         textRollMin.textContent = rolledMin!==0?rolledMin:'';
