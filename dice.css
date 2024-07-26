@@ -1,0 +1,51 @@
+.title {
+  margin-bottom: 12px; 
+  text-decoration: underline;
+}
+
+.displayNumber {
+  margin: 0; 
+  font-size: 32px; 
+  color: black; 
+  font-weight: bold;
+}
+.inputBoxes {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+
+  div {
+    margin: 5px;
+    p {
+      margin: 5px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    input {
+      width: 64px;
+      border-width: 4px;
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+    }
+  }
+}
+
+#roll {
+  width: 96px;
+  font-size: 20px;
+  height: 32px;
+  border-width: 4px
+}
+.checkboxes {
+  font-size: 24px; 
+  font-weight: bold;
+}
+.result {
+  width: 320px; 
+  font-size: 20px; 
+  height: auto; 
+  min-height: 63.5px; 
+  border: 4px inset black; 
+  padding: 10px;
+}
