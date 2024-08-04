@@ -1,3 +1,42 @@
+@font-face {
+  font-family: 'asapregular';
+  src: url('./Assets/Fonts/asap-variablefont_wdthwght-webfont.woff2') format('woff2'),
+       url('./Assets/Fonts/asap-variablefont_wdthwght-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+@font-face {
+  font-family: 'asapitalic';
+  src: url('./Assets/Fonts/asap-italic-variablefont_wdthwght-webfont.woff2') format('woff2'),
+       url('./Assets/Fonts/asap-italic-variablefont_wdthwght-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+/* Estilização global */
+body {
+  font-family: 'asapregular', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0px;
+  
+  a {
+      text-decoration: none;
+  }
+}
+@media screen and (max-width: 720px) {
+  body {
+      font-size: 16px;
+  }
+}   
+
+body {
+  font-family: 'Franklin Gothic Medium';
+}
+
 .title {
   margin-bottom: 12px; 
   text-decoration: underline;
@@ -48,4 +87,55 @@
   min-height: 63.5px; 
   border: 4px inset black; 
   padding: 10px;
+}
+.botaoFlutuante{
+  background: linear-gradient(90deg, var(--verde), var(--ciano));
+  position:fixed;
+  width:64px;
+  height:64px;
+  bottom:40px;
+  right:40px;
+  color:#FFF;
+  border-radius:50px;
+  text-align:center;
+  box-shadow: 2px 2px 3px #999;
+
+  &:hover {
+      --verde: #11d000;
+      --ciano: #00ffee;
+      transition: --verde 0.5s, --ciano 0.5s;
+  } 
+  &:active {
+      --verde: #61D057;
+      --ciano: #62db78;
+      transition: --verde 0.1s, --ciano 0.1s;
+  }    
+  img{
+      height: 44px;
+      margin-top: 10px;
+  }
+}
+@media screen and (max-width: 720px) { 
+  .botaoFlutuante{
+      width:54px;
+      height:54px;
+      bottom:4%;
+      right:8%;   
+      img{
+          height: 36px;
+          margin-top: 9px;
+      }
+  }
+}
+@media screen and (max-width: 380px) { 
+  .botaoFlutuante{
+      width:48px;
+      height:48px;
+      bottom:4%;
+      right:8%;   
+      img{
+          height: 32px;
+          margin-top: 8px;
+      }
+  }
 }
