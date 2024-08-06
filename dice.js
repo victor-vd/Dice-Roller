@@ -1,15 +1,15 @@
-const rolledDices = document.getElementById("rolledDices");
+const rolledDices = document.querySelector("#rolledDices");
 let rolled = 0, rolledAvg = 0, rolledMin = 0, rolledMax = 0, avgValue = 0, rolling, minValue, maxValue;
-const getMaxValue = document.getElementById("getMaxValue");
-const getMinValue = document.getElementById("getMinValue");
-const getAverage = document.getElementById("getAverage");
-const roundMin = document.getElementById("roundMin");
-const roundMax = document.getElementById("roundMax");
+const getMaxValue = document.querySelector("#getMaxValue");
+const getMinValue = document.querySelector("#getMinValue");
+const getAverage = document.querySelector("#getAverage");
+const roundMin = document.querySelector("#roundMin");
+const roundMax = document.querySelector("#roundMax");
 
-document.getElementById("roll").onclick = function(){
+document.querySelector("#roll").onclick = function(){
     rolledDices.textContent = ""
-    let diceNumber = Number(document.getElementById("diceNumber").value);
-    let diceSides = Number(document.getElementById("diceSides").value);
+    let diceNumber = Number(document.querySelector("#diceNumber").value);
+    let diceSides = Number(document.querySelector("#diceSides").value);
 
     if(!((diceNumber == 0)||(diceSides == 0))){
         for(let i=1; i<=diceNumber; i++){
@@ -48,9 +48,9 @@ document.getElementById("roll").onclick = function(){
             rolledAvg = "avg: "+avgValue;
         }
 
-        document.getElementById("rolledMax").textContent = rolledMax!==0?rolledMax:'';
-        document.getElementById("rolledAvg").textContent = rolledAvg!==0?rolledAvg:'';    
-        document.getElementById("rolledMin").textContent = rolledMin!==0?rolledMin:'';
+        document.querySelector("#rolledMax").textContent = rolledMax!==0?rolledMax:'';
+        document.querySelector("#rolledAvg").textContent = rolledAvg!==0?rolledAvg:'';    
+        document.querySelector("#rolledMin").textContent = rolledMin!==0?rolledMin:'';
         rolled = 0;
     }
 }

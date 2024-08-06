@@ -2,23 +2,20 @@
   font-family: 'asapregular';
   src: url('./Assets/Fonts/asap-variablefont_wdthwght-webfont.woff2') format('woff2'),
        url('./Assets/Fonts/asap-variablefont_wdthwght-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
 
 }
 @font-face {
   font-family: 'asapitalic';
   src: url('./Assets/Fonts/asap-italic-variablefont_wdthwght-webfont.woff2') format('woff2'),
        url('./Assets/Fonts/asap-italic-variablefont_wdthwght-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+
 
 }
 
 
 /* Estilização global */
 body {
-  font-family: 'asapregular', sans-serif;
+  font-family: 'asapregular';
   font-size: 24px;
   font-weight: bold;
   margin: 0px;
@@ -26,15 +23,9 @@ body {
   a {
       text-decoration: none;
   }
-}
-@media screen and (max-width: 720px) {
-  body {
-      font-size: 16px;
+  @media screen and (max-width: 720px) {
+    font-size: 16px;
   }
-}   
-
-body {
-  font-family: 'Franklin Gothic Medium';
 }
 
 .title {
